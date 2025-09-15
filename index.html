@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Community Musicale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎵 La Community della Musica 🎵</h1>
+
+  <!-- Menu a tendina per i filtri -->
+  <details>
+    <summary>Filtri 🎚️</summary>
+    <div id="filtri">
+      <label for="filtro-genere">Genere:</label>
+      <select id="filtro-genere">
+        <option value="">-- Tutti --</option>
+      </select>
+
+      <label for="filtro-artista">Artista:</label>
+      <select id="filtro-artista">
+        <option value="">-- Tutti --</option>
+      </select>
+
+      <label for="filtro-anno-min">Anno da:</label>
+      <input type="number" id="filtro-anno-min" placeholder="Es. 1990">
+
+      <label for="filtro-anno-max">a:</label>
+      <input type="number" id="filtro-anno-max" placeholder="Es. 2020">
+
+      <button onclick="applicaFiltri()">Applica</button>
+    </div>
+    
+  </details>
+  <!-- Menu a tendina per aggiungere una nuova canzone -->
+  <details>
+    <summary>Aggiungi una nuova canzone ➕</summary>
+    <div id="aggiungi-canzone">
+      <input type="text" id="nuovo-titolo" placeholder="Titolo">
+      <input type="text" id="nuovo-artista" placeholder="Artista">
+      <input type="text" id="nuovo-genere" placeholder="Genere">
+      <input type="number" id="nuovo-anno" placeholder="Anno">
+      <button onclick="aggiungiCanzone()">Aggiungi</button>
+    </div>
+  </details>
+
+  <!-- Tabella dei brani -->
+  <table id="tabella-musica">
+    <thead>
+      <tr>
+        <th>Titolo</th>
+        <th>Artista</th>
+        <th>Genere</th>
+        <th>Anno</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
